@@ -99,9 +99,18 @@ function calcularImpuestos() {
         return;
     }
 
-    const producto = parseFloat(productoInput.value);
-    const envioGratis = envioGratisSelect.value === 'si';
-    const envio = envioGratis ? producto * 0.10 : parseFloat(envioInput.value);
+    const moneda = monedaSelect.value;
+
+    let producto = parseFloat(productoInput.value);
+    let envioGratis = envioGratisSelect.value === 'si';
+    let envio = envioGratis ? producto * 0.10 : parseFloat(envioInput.value);
+
+    //conversion de moneda si es usd
+    if (moneda === 'usd') {
+        const dolar = ValorDolar();
+        producto = producto * dolar;
+        envio = envio * dolar;
+    }
 
     const totalCompra = calcularTotalCompra(producto, envio);
     const dolar = ValorDolar();
@@ -123,7 +132,7 @@ function calcularImpuestos() {
             useGrouping: true, //forzar uso de separador de miles
           });
         }
-    totalCompraInput.value = formatearNumero(totalCompra)
+    totalCompraInput.value = formatearNumero(totalCompra);
     dolarInput.value = dolar;
     seguroInput.value = formatearNumero(seguro);
     cifInput.value = formatearNumero(cif);
@@ -137,8 +146,14 @@ function calcularImpuestos() {
 
 // Funciones para el cálculo
     //total compra
-    function calcularTotalCompra(producto, envio){
-    return producto + envio;
+    function calcularTotalCompra(producto, envio) {
+        const dolar = ValorDolar(); //obtener el valor del dolar
+        const total = producto + envio;
+        
+        if (total < 41 * dolar) {
+            return 0;
+        }
+        return total;
     }
 
     //dolar
@@ -176,68 +191,69 @@ function calcularImpuestos() {
     function calcularHonorarios(empresa, cif, producto) {
     honorariosError.textContent = '';
     let honorarios = 0;
+    const dolar = ValorDolar(); //obtener el valor del dolar
         if (empresa === 'correos') {
-        honorarios = 2.21 + (0.015 * cif);
+        honorarios = 2000 + (0.015 * cif);
         }
         else if (empresa === 'dhl') {
-            if (producto <= 30) {
+            if (producto <= 30 * dolar) {
                 honorarios = 0;
-            } else if (producto <= 100) {
-                honorarios = 15;
-            } else if (producto <= 400) {
-                honorarios = 37;
-            } else if (producto <= 1000) {
-                honorarios = 75;
-            } else if (producto <= 3000) {
-                honorarios = 170;
-            } else if (producto > 3000) {
+            } else if (producto <= 100 * dolar) {
+                honorarios = 15 * dolar;
+            } else if (producto <= 400 * dolar) {
+                honorarios = 37 * dolar;
+            } else if (producto <= 1000 * dolar) {
+                honorarios = 75 * dolar;
+            } else if (producto <= 3000 * dolar) {
+                honorarios = 170 * dolar;
+            } else if (producto > 3000 * dolar) {
                 honorariosError.textContent = 'No es posible calcular los honorarios';
-                return false;
+                honorarios = 0;
             }
         }
         else if (empresa === 'ups') {
-            if (producto <= 30) {
+            if (producto <= 30 * dolar) {
                 honorarios = 0;
-            } else if (producto <= 50) {
-                honorarios = 11.96;
-            } else if (producto <= 70) {
-                honorarios = 21.84;
-            } else if (producto <= 100) {
-                honorarios = 29.75;
-            } else if (producto <= 200) {
-                honorarios = 37.13;
-            } else if (producto <= 400) {
-                honorarios = 55.45;
-            } else if (producto <= 700) {
-                honorarios = 73.78;
-            } else if (producto <= 1000) {
-                honorarios = 82.88;
-            } else if (producto <= 3000) {
-                honorarios = 171.54;
-            } else if (producto > 3000) {
+            } else if (producto <= 50 * dolar) {
+                honorarios = 11.96 * dolar;
+            } else if (producto <= 70 * dolar) {
+                honorarios = 21.84 * dolar;
+            } else if (producto <= 100 * dolar) {
+                honorarios = 29.75 * dolar;
+            } else if (producto <= 200 * dolar) {
+                honorarios = 37.13 * dolar;
+            } else if (producto <= 400 * dolar) {
+                honorarios = 55.45 * dolar;
+            } else if (producto <= 700 * dolar) {
+                honorarios = 73.78 * dolar;
+            } else if (producto <= 1000 * dolar) {
+                honorarios = 82.88 * dolar;
+            } else if (producto <= 3000 * dolar) {
+                honorarios = 171.54 * dolar;
+            } else if (producto > 3000 * dolar) {
                 honorariosError.textContent = 'No es posible calcular los honorarios';
-                return false;
+                honorarios = 0;
             }
         }
         else if (empresa === 'fedex') {
-            if (producto <= 29.99) {
+            if (producto <= 29.99 * dolar) {
                 honorarios = 0;
-            } else if (producto <= 49.99) {
-                honorarios = 20.23;
-            } else if (producto <= 69.99) {
-                honorarios = 38.08;
-            } else if (producto <= 99.99) {
-                honorarios = 46.41;
-            } else if (producto <= 299.99) {
-                honorarios = 65.45;
-            } else if (producto <= 399.99) {
-                honorarios = 98.77;
-            } else if (producto <= 599.99) {
-                honorarios = 117.81;
-            } else if (producto <= 1000) {
-                honorarios = 130.90;
-            } else if (producto > 1000) {
-                honorarios = 188.02;
+            } else if (producto <= 49.99 * dolar) {
+                honorarios = 20.23 * dolar;
+            } else if (producto <= 69.99 * dolar) {
+                honorarios = 38.08 * dolar;
+            } else if (producto <= 99.99 * dolar) {
+                honorarios = 46.41 * dolar;
+            } else if (producto <= 299.99 * dolar) {
+                honorarios = 65.45 * dolar;
+            } else if (producto <= 399.99 * dolar) {
+                honorarios = 98.77 * dolar;
+            } else if (producto <= 599.99 * dolar) {
+                honorarios = 117.81 * dolar;
+            } else if (producto <= 1000 * dolar) {
+                honorarios = 130.90 * dolar;
+            } else if (producto > 1000 * dolar) {
+                honorarios = 188.02 * dolar;
             }
         }
         return honorarios;
@@ -246,12 +262,15 @@ function calcularImpuestos() {
     //bodega
     function calcularBodega(empresa) {
     let bodega = 0;
-        if (empresa === 'correos' || empresa === 'ups') {
+    const dolar = ValorDolar(); //obtener el valor del dolar
+        if (empresa === 'correos') {
             bodega = 0;
         } else if (empresa === 'dhl') {
-            bodega = 10;
+            bodega = 10 * dolar;
+        } else if (empresa === 'ups') {
+            bodega = 0;
         } else if (empresa === 'fedex') {
-            bodega = 8.1;
+            bodega = 8.1 * dolar;
         }
         return bodega;
     }
