@@ -45,7 +45,7 @@ envioGratisSelect.addEventListener('change', function() {
 // Funciones para mostrar errores
     // Función para validar valores
     function validarValores() {
-        const producto = parseFloat(productoInput.value);
+        const producto = parseFloat(productoInput.value)
         const envioGratis = envioGratisSelect.value === 'si';
     
     if (isNaN(producto) || producto <= 0) {
@@ -53,7 +53,7 @@ envioGratisSelect.addEventListener('change', function() {
         return false;
         }
     if (!envioGratis) {
-        const envio = parseFloat(envioInput.value);
+        const envio = parseFloat(envioInput.value)
     
     if (isNaN(envio) || envio <= 0) {
         envioError.textContent = 'Ingresa un valor válido.';
@@ -112,8 +112,14 @@ function calcularImpuestos() {
         envio = envio * dolar;
     }
 
-    const totalCompra = calcularTotalCompra(producto, envio);
     const dolar = ValorDolar();
+
+    //condicion para no calcular impuestos
+    const totalCompra = calcularTotalCompra(producto, envio);
+        if (totalCompra < 41 * dolar) {
+            return;
+        }
+
     const seguro = calcularSeguro(producto);
     const cif = calcularCIF(producto, envio, seguro);
     const arancel = calcularArancel(cif);
@@ -147,13 +153,7 @@ function calcularImpuestos() {
 // Funciones para el cálculo
     //total compra
     function calcularTotalCompra(producto, envio) {
-        const dolar = ValorDolar(); //obtener el valor del dolar
-        const total = producto + envio;
-        
-        if (total < 41 * dolar) {
-            return 0;
-        }
-        return total;
+    return producto + envio;
     }
 
     //dolar
