@@ -7,119 +7,160 @@
     <link rel="stylesheet" href="styles-calculadora.css">
 </head>
 <body>
-    <h1>Calculadora de Impuestos AliExpress</h1>
-        <p>Ingresa el precio del producto y del envío y dale al botón</p>
 
-    <form>
-        <p><label for="moneda">Moneda:</label></p>
+<h1>Calculadora de Impuestos AliExpress</h1>
+    <p>Ingresa el precio del producto y del envío y dale al botón</p>
+
+<form>
+
+    <!--Selector moneda-->
+    <p><label for="moneda">Moneda:</label></p>
         <select id="moneda">
             <option value="">Selecciona una opción</option>
             <option value="usd">Dolar (USD)</option>
             <option value="clp">Peso Chileno (CLP)</option>
         </select>
-        <p id="monedaError" class="error"></p>
+    <p id="monedaError" class="error"></p>
 
-        <p><label for="producto">Precio del Producto:</label></p>
+
+    <!--Valor producto-->
+    <p><label for="producto">Precio del Producto:</label></p>
         <input type="number" id="producto" step="0.01" placeholder="Ingrese el precio">
-        <p id="productoError" class="error"></p>
+    <p id="productoError" class="error"></p>
 
-        <p><label for="envioGratis">Envío gratis:</label></p>
+
+    <!--Selector envio gratis-->
+    <p><label for="envioGratis">Envío gratis:</label></p>
         <select id="envioGratis">
             <option value="">Selecciona una opción</option>
             <option value="si">Sí</option>
             <option value="no">No</option>
         </select>
-        <p id="envioGratisError" class="error"></p>
+    <p id="envioGratisError" class="error"></p>
 
-        <p><label for="envio">Precio del Envío:</label></p>
+
+    <!--Valor envio-->
+    <p><label for="envio">Precio del Envío:</label></p>
         <input type="number" id="envio" step="0.01" placeholder="Ingrese el precio">
-        <p id="envioError" class="error"></p>
+    <p id="envioError" class="error"></p>
 
-        <p><label for ="empresa">Empresa:</label></p>
+
+    <!--Selector empresa-->
+    <p><label for ="empresa">Empresa:</label></p>
         <select id="empresa">
             <option value="">Selecciona una opción</option>
             <option value="correos">Correos Chile</option>
             <option value="dhl">DHL</option>
             <option value="ups">UPS</option>
-            <option value="fedex">FedEx</option>
+            <option value="fedex">FedEx</optio>
         </select>
-        <p id="empresaError" class="error"></p>
+    <p id="empresaError" class="error"></p>
 
-        <br><br>
+
+    <!--Boton calcular-->
     <button type="button" id="calcular">Calcular</button>
-    </form> <br>
 
-    <h2>Total aproximado</h2>
+</form>
 
+    <br>
+
+<h2>Total aproximado</h2>
+
+    <!--Suma aduana y honorarios-->
     <div class="box">
         <p><label for="impuestos">Total a pagar</label></p>
             <p class="p">Es la suma de los honorarios e impuestos.</p>
         <input type="text" id="impuestos" class="salida" readonly>
+        <p id="impuestosError" class="error"></p>
     </div> <br>
 
+
+    <!--Suma arancel e iva-->
     <div class="box">
         <p><label for="aduana">Total Aduana</label></p>
             <p class="p">Es la suma del Arancel aduanero más el IVA</p>
         <input type="text" id="aduana" class="salida" readonly>
+        <p id="aduanaError" class="error"></p>
     </div> <br>
 
+
+    <!--Suma honorarios y bodega-->
     <div class="box">
         <p><label for="totalHonorarios">Total honorarios</label></p>
             <p class="p">Es la suma de los honorarios y almacenaje.</p>
         <input type="text" id="totalHonorarios" class="salida" readonly>
+        <p id="totalHonorariosError" class="error"></p>
+    </div> <br>
+
+
+<h2>Detalle del cálculo</h2>
+
+    <!--Suma producto y envio-->
+    <div class="box">
+        <p><label for="totalCompra">Total Compra</label></p>
+            <p class="p">Es la suma del valor del producto y envio</p>
+        <input type="text" id="totalCompra" class="salida" readonly>
+    </div> <br>
+
+
+    <!--Dolar aduanero-->
+    <div class="box">
+        <p><label for="dolar">Valor dolar</label></p>
+            <p class="p">Valor dolar aduanero de octubre 2023</p>
+        <input type="text" id="dolar" class="salida" readonly>
+    </div> <br>
+
+
+    <!--Valor seguro-->
+    <div class="box">
+        <p><label for="seguro">Valor seguro</label></p>
+            <p class="p">Es el 2% del valor del producto.</p>
+        <input type="text" id="seguro" class="salida" readonly>
+    </div> <br>
+
+
+    <!--Valor CIF-->
+    <div class="box">
+        <p><label for="cif">Valor CIF</label></p>
+            <p class="p">Es la suma del valor del producto, envío y seguro.</p>
+        <input type="text" id="cif" class="salida" readonly>
+    </div> <br>
+
+
+    <!--Valor arancel-->
+    <div class="box">
+        <p><label for="arancel">Arancel aduanero</label></p>
+            <p class="p">Es el 6% del valor CIF</p>
+        <input type="text" id="arancel" class="salida" readonly>
+    </div> <br>
+
+
+    <!--Valor IVA-->
+    <div class="box">
+        <p><label for="iva">IVA</label></p>
+            <p class="p">Es el 19% de la suma del valor CIF y arancel aduanero.</p>
+        <input type="text" id="iva" class="salida" readonly>
+    </div> <br>
+
+
+    <!--Honorarios-->
+    <div class="box">
+        <p><label for="honorarios">Honorarios</label></p>
+            <p class="p">Es lo que cobra la empresa que hace los trámites aduanales.</p>
+        <input type="text" id="honorarios" class="salida" readonly>
         <p id="honorariosError" class="error"></p>
-        </div> <br>
-
-    <h2>Detalle del cálculo</h2>
-
-    <div class="box">
-    <p><label for="totalCompra">Total Compra</label></p>
-    <p class="p">Es la suma del valor del producto y envio</p>
-    <input type="text" id="totalCompra" class="salida" readonly>
     </div> <br>
 
-    <div class="box">
-    <p><label for="dolar">Valor dolar</label></p>
-    <p class="p">Valor dolar aduanero de octubre 2023</p>
-    <input type="text" id="dolar" class="salida" readonly>
-    </div> <br>
 
+    <!--Valor bodega-->
     <div class="box">
-    <p><label for="seguro">Valor seguro</label></p>
-    <p class="p">Es el 2% del valor del producto.</p>
-    <input type="text" id="seguro" class="salida" readonly>
-    </div> <br>
+        <p><label for="bodega">Almacenaje</label></p>
+            <p class="p">Es el cargo diario por ocupar un espacio en bodega.</p>
+        <input type="text" id="bodega" class="salida" readonly>
+    </div>
 
-    <div class="box">
-    <p><label for="cif">Valor CIF</label></p>
-    <p class="p">Es la suma del valor del producto, envío y seguro.</p>
-    <input type="text" id="cif" class="salida" readonly>
-    </div> <br>
- 
-    <div class="box">
-    <p><label for="arancel">Arancel aduanero</label></p>
-    <p class="p">Es el 6% del valor CIF</p>
-    <input type="text" id="arancel" class="salida" readonly>
-    </div> <br>
 
-    <div class="box">
-    <p><label for="iva">IVA</label></p>
-    <p class="p">Es el 19% de la suma del valor CIF y arancel aduanero.</p>
-    <input type="text" id="iva" class="salida" readonly>
-    </div> <br>
+<script src="script-calculadora.js"></script>
 
-    <div class="box">
-    <p><label for="honorarios">Honorarios</label></p>
-    <p class="p">Es lo que cobra la empresa que hace los trámites aduanales.</p>
-    <input type="text" id="honorarios" class="salida" readonly>
-    </div> <br>
-
-    <div class="box">
-    <p><label for="bodega">Almacenaje</label></p>
-    <p class="p">Es el cargo diario por ocupar un espacio en bodega.</p>
-    <input type="text" id="bodega" class="salida" readonly>
-    </div> <br>
-
-    <script src="script-calculadora.js"></script>
 </body>
 </html>

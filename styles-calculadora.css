@@ -6,22 +6,35 @@ body {
     padding: 20px;
 }
 
+/*titulos*/
 h1 {
     font-size: 2.3em;
 }
 
+/*sub-titulo*/
 h2 {
     font-size: 1.5em;
 }
 
+/*parrafo*/
 p {
     font-size: 1.2em;
 }
 
+/*texto pequeño*/
 .p {
     font-size: 0.9em;
 }
 
+/*texto error en rojo*/
+.error {
+    font-size: 1em;
+    color: red;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/*link*/
 a {
     color: blue;
     text-decoration: none;
@@ -31,21 +44,18 @@ a:hover {
     text-decoration: underline;
 }
 
-.result-text {
-    font-size: 1em;
-} 
-  
-/*cuadrado*/
+/*entrada texto*/
 input {
     width: 250px;
     height: 30px;
     font-size: 1em;
 }
 
+/*entrada texto read only*/
 .salida {
-    background-color: lightgray;
+background-color: lightgray;
 }
-  
+
 /*boton*/
 button {
     background-color: #ff0000;
@@ -79,11 +89,4 @@ select option {
     max-width: 330px;
     height: 180px;
     margin: auto;
-}
-
-.error {
-    font-size: 1em;
-    color: red;
-    font-weight: bold;
-    margin-top: 5px;
 }
