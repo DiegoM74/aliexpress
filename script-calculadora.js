@@ -324,5 +324,5 @@
 
 }
 
-    // Asignar el evento click al botón
-        calcularButton.addEventListener('click', calcularImpuestos);
+// Asignar el evento click al botón
+    calcularButton.addEventListener('click', calcularImpuestos);

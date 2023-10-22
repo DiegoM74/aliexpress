@@ -44,16 +44,23 @@ a:hover {
     text-decoration: underline;
 }
 
-/*entrada texto*/
-input {
+/*entrada numeros*/
+input[type="number"] {
     width: 250px;
+    height: 30px;
+    font-size: 1em;
+}
+
+/*entrada texto*/
+input[type="text"] {
+    width: 220px;
     height: 30px;
     font-size: 1em;
 }
 
 /*entrada texto read only*/
 .salida {
-background-color: lightgray;
+    background-color: #dcdcdc;
 }
 
 /*boton*/
@@ -83,10 +90,26 @@ select option {
     font-size: 1em;
 }
 
-/*contorno*/
+/*contorno grande*/
+.totales {
+    border: 2px solid #ccc;
+    max-width: 310px;
+    height: 160px;
+    margin: auto;
+}
+
+/*contorno mediano*/
+.med {
+    border: 2px solid #ccc;
+    max-width: 260px;
+    height: 182px;
+    margin: auto;
+}
+
+/*contorno pequeño*/
 .box {
     border: 2px solid #ccc;
-    max-width: 330px;
-    height: 180px;
+    max-width: 260px;
+    height: 137px;
     margin: auto;
 }
