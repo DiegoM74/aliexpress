@@ -46,7 +46,8 @@
 
 
     <!--Selector empresa-->
-    <p><label for ="empresa">Empresa</label></p>
+    <p class="det"><label for ="empresa">Empresa</label></p>
+        <p class="p-det">Si no sabes cual es, elige Correos.</p>
         <select id="empresa">
             <option value="">Selecciona una opción</option>
             <option value="correos">Correos Chile</option>
@@ -94,74 +95,71 @@
 <h2>Importante</h2>
     <p>- Son cálculos aproximados. No es posible hacer cálculos 100% precisos.</p>
     <p>- Tomar como referencia solamente.</p>
-    <p>- </p>
 
 <h2>Detalle del cálculo</h2>
 
     <!--Suma producto y envio-->
     <div class="box">
-        <p><label for="totalCompra">Total Compra</label></p>
-            <p class="p">Suma del valor del producto y envío.</p>
+        <p class="det"><label for="totalCompra">Total Compra</label></p>
+            <p class="p-det">Suma del valor del producto y envío.</p>
         <input type="text" id="totalCompra" class="salida" readonly>
     </div> <br>
 
 
     <!--Dolar aduanero-->
     <div class="box">
-        <p><label for="dolar">Valor dolar</label></p>
-            <p class="p">Dólar aduanero de octubre 2023.</p>
+        <p class="det"><label for="dolar">Valor dolar</label></p>
+            <p class="p-det">Dólar aduanero de octubre 2023.</p>
         <input type="text" id="dolar" class="salida" readonly>
     </div> <br>
 
 
     <!--Valor seguro-->
     <div class="box">
-        <p><label for="seguro">Valor seguro</label></p>
-            <p class="p">2% del valor del producto.</p>
+        <p class="det"><label for="seguro">Valor seguro</label></p>
+            <p class="p-det">2% del valor del producto.</p>
         <input type="text" id="seguro" class="salida" readonly>
     </div> <br>
 
 
     <!--Valor CIF-->
     <div class="box">
-        <p><label for="cif">Valor CIF</label></p>
-            <p class="p">Suma del producto, envío y seguro.</p>
+        <p class="det"><label for="cif">Valor CIF</label></p>
+            <p class="p-det">Suma del producto, envío y seguro.</p>
         <input type="text" id="cif" class="salida" readonly>
     </div> <br>
 
 
     <!--Valor arancel-->
     <div class="box">
-        <p><label for="arancel">Arancel aduanero</label></p>
-            <p class="p">6% del valor CIF</p>
+        <p class="det"><label for="arancel">Arancel aduanero</label></p>
+            <p class="p-det">6% del valor CIF</p>
         <input type="text" id="arancel" class="salida" readonly>
     </div> <br>
 
 
     <!--Valor IVA-->
     <div class="box">
-        <p><label for="iva">IVA</label></p>
-            <p class="p">19% de la suma del valor CIF y arancel.</p>
+        <p class="det"><label for="iva">IVA</label></p>
+            <p class="p-det">19% de la suma del valor CIF y arancel.</p>
         <input type="text" id="iva" class="salida" readonly>
     </div> <br>
 
 
     <!--Honorarios-->
     <div class="med">
-        <p><label for="honorarios">Honorarios</label></p>
-            <p class="p">Cargo cobrado por la empresa por liberar el pedido.</p>
-        <input type="text" id="honorarios" class="salida" readonly>
-        <p id="honorariosError" class="error"></p>
+        <p class="det"><label for="honorarios">Honorarios</label></p>
+            <p class="p-det">Cargo cobrado por la empresa por liberar el pedido.</p>
+        <p id="honorariosError" class="error"><input type="text" id="honorarios" class="salida" readonly></p>
     </div> <br>
 
 
     <!--Valor bodega-->
     <div class="box">
-        <p><label for="bodega">Almacenaje</label></p>
-            <p class="p">Cargo diario por almacenar el pedido.</p>
+        <p class="det"><label for="bodega">Almacenaje</label></p>
+            <p class="p-det">Cargo diario por almacenar el pedido.</p>
         <input type="text" id="bodega" class="salida" readonly>
     </div>
-
 
 <script src="script-calculadora.js"></script>
 

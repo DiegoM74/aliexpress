@@ -26,6 +26,18 @@ p {
     font-size: 0.9em;
 }
 
+/*parrafo calculo detallado*/
+.det {
+    font-size: 1.2em;
+    margin-bottom: 0; /*margen inferior*/
+}
+
+/*texto pequeño detallado*/
+.p-det {
+    font-size: 0.9em;
+    margin-top: 4px; /*margen superior*/
+}
+
 /*texto error en rojo*/
 .error {
     font-size: 1em;
@@ -102,7 +114,7 @@ select option {
 .med {
     border: 2px solid #ccc;
     max-width: 260px;
-    height: 182px;
+    height: 145px;
     margin: auto;
 }
 
@@ -110,6 +122,6 @@ select option {
 .box {
     border: 2px solid #ccc;
     max-width: 260px;
-    height: 137px;
+    height: 130px;
     margin: auto;
 }
