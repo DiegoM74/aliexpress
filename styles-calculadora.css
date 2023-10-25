@@ -46,16 +46,6 @@ p {
     margin-top: 5px;
 }
 
-/*link*/
-a {
-    color: blue;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 /*entrada numeros*/
 input[type="number"] {
     width: 250px;
