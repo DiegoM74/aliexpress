@@ -1,5 +1,5 @@
-# (Nombre por definir)
-¡Bienvenido a (nombre por definir)! Este proyecto tiene como objetivo proporcionar recursos y herramientas para facilitar tus compras en AliExpress desde Chile. Incluye una amplia variedad de guías informativas y herramientas útiles para mejorar tu experiencia de compra.
+# Ayudas AliExpress Chile
+Este proyecto tiene como objetivo proporcionar recursos y herramientas para facilitar tus compras en AliExpress desde Chile. Incluye una amplia variedad de guías informativas y herramientas útiles para mejorar tu experiencia de compra.
 
 ## Contenido
 1. [Introducción](#introducción)
@@ -24,4 +24,4 @@ Además de las guías informativas, hay 2 herramientas útiles, y 1 más en proc
 
 1. **Reconocedor de códigos de seguimiento**: Esta herramienta te permite ingresar un código de seguimiento y obtener información sobre el envío, tal como la empresa que lo reparte y cuanto tarda en llegar.
 2. **Calculadora de Impuestos**: La calculadora tiene en cuenta factores generales, como el IVA o arancel aduanero, así como específicos, tales como honorarios de desaduanamiento y almacenaje, esto para proporcionar un cálculo más preciso.
-3. **Buscador de envios** (en proceso de programación): Esta herramienta te permite ingresar el nombre de un método de envío y obtener información sobre este, tales como empresa que reparte y cuanto tarda en llegar.
+3. **Buscador de envios** (en programación): Esta herramienta te permite ingresar el nombre de un método de envío y obtener información sobre este, tales como empresa que reparte y cuanto tarda en llegar.
