@@ -21,25 +21,30 @@ p {
     font-size: 1.2em;
 }
 
-/*links*/
+/*parrafo justificado*/
+.p {
+    text-align: justify;
+}
+
+/*links o botones*/
 a {
     font-size: 1.2em;
     text-decoration: none;
-    color: white;
-}
-
-/*contenedor grande*/
-.big {
-    border: 2px solid #ccc;
-    max-width: 310px;
-    height: 160px;
-    margin: auto;
-}
-
-.big a {
-    display: block;
-    max-width: 250px;
-    height: 40px;
-    margin: auto;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
     background-color: #ff0000;
+    margin: 5px
+}
+
+a:hover {
+    background-color: #f10000;
+}
+
+/*contenedor*/
+.big {
+    border: 1px solid #000;
+    padding: 20px;
+    max-width: 300px;
+    margin: 0 auto;
 }

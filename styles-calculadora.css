@@ -94,7 +94,7 @@ select option {
 
 /*contorno grande*/
 .totales {
-    border: 2px solid #ccc;
+    border: 1px solid #000;
     max-width: 310px;
     height: 160px;
     margin: auto;
@@ -102,7 +102,7 @@ select option {
 
 /*contorno mediano*/
 .med {
-    border: 2px solid #ccc;
+    border: 1px solid #000;
     max-width: 260px;
     height: 145px;
     margin: auto;
@@ -110,7 +110,7 @@ select option {
 
 /*contorno pequeño*/
 .box {
-    border: 2px solid #ccc;
+    border: 1px solid #000;
     max-width: 260px;
     height: 130px;
     margin: auto;
