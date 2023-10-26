@@ -19,7 +19,7 @@ h2 {
 /*parrafo justificado*/
 p {
     font-size: 1.2em;
-    text-align: left;
+    text-align: justify;
 }
 
 /*parrafo normal*/
