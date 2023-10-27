@@ -16,17 +16,18 @@ h2 {
     font-size: 1.5em;
 }
 
-/*parrafo*/
+/*parrafo justificado*/
 p {
     font-size: 1.2em;
-}
-
-/*parrafo justificado*/
-.p {
     text-align: justify;
 }
 
-/*links o botones*/
+/*parrafo normal*/
+.p {
+    text-align: center;
+}
+
+/*links botones*/
 a {
     font-size: 1.2em;
     text-decoration: none;
@@ -34,7 +35,7 @@ a {
     display: inline-block;
     padding: 10px 20px;
     background-color: #ff0000;
-    margin: 5px
+    margin: 5px;
 }
 
 a:hover {

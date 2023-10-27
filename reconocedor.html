@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconocedor de códigos de AliExpress</title>
+    <link rel="stylesheet" href="styles-reconocedor.css">
+</head>
+<body>
+
+<h1>Reconocedor de códigos de AliExpress</h1>
+    <p>Pega tu código de seguimiento, después dale al botón y podrás ver información sobre tu envío.</p>
+    <p>Puedes darle clic a los nombres de las empresas para ir a su página y hacer seguimiento desde ahí.</p>
+
+    <!--Input codigo-->
+    <input type="text" id="code" placeholder="Ingresa el código"> <br> <br>
+
+    <!--Boton-->
+    <button type="submit" onclick="checkCode()">Obtener información</button> <br> <br>
+
+    <!--Resultado-->
+    <div id="result-container" class="result-container">
+        <p id="result" class="result"></p>
+    </div> 
+
+<h2>Importante</h2>
+    <p>Esto no sirve para hacer seguimiento, es para saber que empresa reparte y otras cosas. Para hacer seguimiento usa las páginas recomendadas.</p>
+    <p>Recomiendo poner el código de seguimiento en una de las páginas recomendadas y buscar un código alternativo. Si sale uno, usar ese en esta página.</p>
+
+<h2>Páginas recomendadas</h2>
+    <p>Te recomiendo usar estas 2 páginas para hacer seguimiento y obtener códigos de seguimientos alternativos.</p>
+    <p><a href="https://postal.ninja">Postal Ninja</a></p>
+    <p><a href="https://global.cainiao.com">Global Cainiao</a></p>
+
+<h2>Envíos compatibles</h2>
+    <p>- Los más conocidos y usados, como el AliExpress Standard Shipping o AliExpress Saver Shipping.</p> 
+    <p>- Los de China Post y Singapore Post (que empiezan con 2 letras y terminan con CN o SG, respectivamente).</p>
+
+<h2>Envíos no compatibles</h2>
+    <p>- Los de Starken, DHL Express, FedEx y algunos de UPS, por no tener un formato definido.</p>
+    <p>- El envío Seller's Shipping Method no tiene 100% de compatibilidad, porque el vendedor decide por donde enviar, y puede elegir cualquier empresa.</p>
+
+<script src="script-reconocedor.js"></script>
+
+</body>
+</html>
