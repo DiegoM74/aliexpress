@@ -7,7 +7,45 @@
     <link rel="stylesheet" href="styles-calculadora.css">
 </head>
 <body>
+    <!--Aqui va la barra de navegacion-->
+    <!--https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp-->
 
+    <div class="topnav" id="myTopnav">
+
+        <!--Boton home-->
+            <a href="main.html" class="active">Home</a>
+
+        <!--Menu herramientas-->
+            <div class="dropdown">
+                <button class="dropbtn">Herramientas 
+                <i class="fa fa-caret-down"></i>
+                </button>
+            <div class="dropdown-content">
+                <a href="reconocedor.html">Reconocedor</a>
+                <a href="calculadora.html">Calculadora</a>
+            </div>
+            </div>
+
+        <!--Menu guias-->
+            <div class="dropdown">
+                <button class="dropbtn">Guías 
+                <i class="fa fa-caret-down"></i>
+                </button>
+            <div class="dropdown-content">
+                <a href="guia-1.html">Consejos para comprar</a>
+                <a href="guia-2.html">Reembolsos</a>
+                <a href="guia-3.html">Envíos desde China</a>
+                <a href="guia-4.html">Aduana Chilena</a>
+            </div>
+            </div>
+
+        <!--Script-->
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <!--Hasta aqui-->
+
+    <!--Aqui empieza la pagina-->
 <h1>Calculadora de Impuestos AliExpress</h1>
     <p>Ingresa el precio del producto y del envío y dale al botón.</p>
         <p class="p">Calculos aproximados. Tomar como referencia.</p>
@@ -150,7 +188,8 @@
     <div class="med">
         <p class="det"><label for="honorarios">Honorarios</label></p>
             <p class="p-det">Cargo cobrado por la empresa por liberar el pedido.</p>
-        <p id="honorariosError" class="error"><input type="text" id="honorarios" class="salida" readonly></p>
+        <input type="text" id="honorarios" class="salida" readonly>
+        <p id="honorariosError" class="error"></p>
     </div> <br>
 
 
@@ -162,6 +201,8 @@
     </div>
 
 <script src="script-calculadora.js"></script>
+
+<script src="script-navbar.js"></script>
 
 </body>
 </html>

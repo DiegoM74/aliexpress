@@ -8,6 +8,40 @@
 </head>
 <body>
     <!--Aqui va la barra de navegacion-->
+    <!--https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp-->
+
+    <div class="topnav" id="myTopnav">
+
+        <!--Boton home-->
+            <a href="main.html" class="active">Home</a>
+
+        <!--Menu herramientas-->
+            <div class="dropdown">
+                <button class="dropbtn">Herramientas 
+                <i class="fa fa-caret-down"></i>
+                </button>
+            <div class="dropdown-content">
+                <a href="reconocedor.html">Reconocedor</a>
+                <a href="calculadora.html">Calculadora</a>
+            </div>
+            </div>
+
+        <!--Menu guias-->
+            <div class="dropdown">
+                <button class="dropbtn">Guías 
+                <i class="fa fa-caret-down"></i>
+                </button>
+            <div class="dropdown-content">
+                <a href="guia-1.html">Consejos para comprar</a>
+                <a href="guia-2.html">Reembolsos</a>
+                <a href="guia-3.html">Envíos desde China</a>
+                <a href="guia-4.html">Aduana Chilena</a>
+            </div>
+            </div>
+
+        <!--Script-->
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
 
     <!--Hasta aqui-->
 
@@ -499,6 +533,8 @@
         </ul>
     </section>
         <br> <br>
+
+<script src="script-navbar.js"></script>
 
 </body>
 </html>

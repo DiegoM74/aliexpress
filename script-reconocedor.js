@@ -7,7 +7,7 @@
     // El resultado se guarda con el id result, para mostrarlo en el html
         var result = document.getElementById("result");
 
-    //
+    // Para el contenedor
         var resultContainer = document.getElementById("result-container");
 
 // Aca empiezan las condiciones para reconocer el codigo
@@ -403,8 +403,10 @@
 
     }
 // invalido
-    //si el codigo no cumple con las condiciones, o no se ingreso nada, el resultado sera...
+    //si el codigo no cumple con las condiciones o no se ingreso nada, el resultado sera...
     else
     result.innerHTML = "<p>Código inválido o desconocido.</p>";
-    resultContainer.style.display = "block";
+
+    // Para el contenedor
+        resultContainer.style.display = "block";
 }
