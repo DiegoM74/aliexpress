@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reembolsos</title>
+    <link rel="stylesheet" href="styles-guias.css">
+</head>
+<body>
+    <!--Aqui va la barra de navegacion-->
+    <!--https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp-->
+
+    <div class="topnav" id="myTopnav">
+
+        <!--Boton home-->
+            <a href="main.html" class="active">Home</a>
+
+        <!--Menu herramientas-->
+            <div class="dropdown">
+                <button class="dropbtn">Herramientas 
+                <i class="fa fa-caret-down"></i>
+                </button>
+            <div class="dropdown-content">
+                <a href="reconocedor.html">Reconocedor</a>
+                <a href="calculadora.html">Calculadora</a>
+            </div>
+            </div>
+
+        <!--Menu guias AliExpress-->
+            <div class="dropdown">
+                <button class="dropbtn">Guías AliExpress
+                <i class="fa fa-caret-down"></i>
+                </button>
+            <div class="dropdown-content">
+                <a href="guia-1.html">Consejos para comprar</a>
+                <a href="guia-2.html">Reembolsos</a>
+                <a href="guia-3.html">Envíos desde China</a>
+                <a href="guia-4.html">Aduana Chilena</a>
+            </div>
+            </div>
+
+        <!--Menu guias Amazon-->
+        <div class="dropdown">
+            <button class="dropbtn">Guías Amazon
+            <i class="fa fa-caret-down"></i>
+            </button>
+        <div class="dropdown-content">
+            <a href="guia-1-AM.html">Consejos para comprar</a>
+            <a href="guia-2-AM.html">Reembolsos</a>
+            <a href="guia-3-AM.html">Envíos desde USA</a>
+            <a href="guia-4-AM.html">Recuperación de cuentas</a>
+        </div>
+        </div>
+
+        <!--Script-->
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <!--Hasta aqui-->
+
+    <!--Boton para volver arriba-->
+    <!--https://programacion.net/articulo/como_implementar_el_boton_de_%E2%80%9Cvolver_a_arriba%E2%80%9D_mediante_css_y_jquery_1822-->
+        <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
+
+    <!--Aqui empieza la pagina-->
+<h1>Reembolsos</h1>
+    <p class="p">En esta guía verán todo lo relacionado a las devoluciones de productos, y reembolsos del dinero.</p>
+
+    <br>
+
+    <!--Contenido guia-->
+    <div class="contenido">
+        <h2>Contenido</h2>
+        <li><a href="#1">Reembolsos del dinero</a></li>
+        <li><a href="#2">Devoluciones del producto</a></li>
+    </div>
+        <br> <br>
+
+
+    <!--Inicio guias-->
+
+    <!--Publicacion 1-->
+    <section id="1">
+        <h2>Reembolsos del dinero</h2>
+            <p>Si algo le pasara a tu pedido durante el camino, ya sea que se pierda, dañe o demore, Amazon te puede hacer el reembolso del dinero.</p>
+            <p>A continuación verán lo que deben hacer si les sucede, y cuanto se tarda el reembolso y a donde puede llegar.</p>
+        <ul>
+            <li>Si la empresa logística informa que tu pedido se perdió o se dañó durante el camino, Amazon te hará el reembolso automáticamente. Si no lo hacen debes contactar con el soporte para que lo procesen.</li>
+            <li>Si la empresa está tardando mucho en entregar el pedido, y la fecha de llegada a sido aplazada varias veces deberás de contactar con el soporte de Amazon para que digan que hacer. Generalmente dicen que hay que esperar hasta una fecha, y si para esa fecha aún no llega harán el reembolso.</li>
+            <li>Complementando los puntos anteriores, si el pedido llega después de que hacen el reembolso, Amazon hará el cobro del pedido automáticamente a la tarjeta donde se hizo la devolución.</li>
+            <li>Puedes elegir si quieres que el reembolso llegue a la tarjeta usada, o que te agreguen el dinero a tu cuenta de Amazon en forma de Gift Card.</li>
+        <ol>
+            <li>Si eliges que lo hagan a la tarjeta usada, el reembolso se tardará en llegar. Amazon da 30 días hábiles como plazo.</li>
+            <li>Si eliges que lo agreguen a tu cuenta, el reembolso llegará de forma casi inmediata. Podrás usarlo en Amazon cuando quieras, ya que no tiene fecha de vencimiento. Para retirar el dinero de ahí tienes que contactar con el soporte de Amazon.</li>
+        </ol>
+        </ul>
+    </section> 
+        <br> <br>
+
+
+    <!--Publicacion 2-->
+    <section id="2">
+        <h2>Devoluciones del producto</h2>
+            <p>Si tu producto llegó con defectos de fabrica o dañado, tendrás que solicitar un reembolso.</p>
+            <p>Probablemente Amazon te pedirá devolver el producto a origen para darte el dinero.</p>
+            <p>Por esto hago esta publicación para que sepan que hacer.</p>
+        <ul>
+            <li>Si el producto llegó con defectos de fabrica o dañado, Amazon te pedirá que lo devuelvas a origen. Esto será gratis para ti. Tienen 2 formas para hacer la devolución.</li>
+        <ol>
+            <li>En la primera, Amazon te dará una etiqueta de devolución de DHL. Por lo tanto solo debes imprimir la etiqueta, pegarla en el paquete e ir a DHL a dejarlo. Una vez llegue a origen te darán el reembolso.</li>
+            <li>En la segunda, Amazon te dará una dirección de devolución, para que vayas a una empresa logística a enviar el paquete (tu eliges cual). Una vez lo hagas debes solicitar la boleta para presentársela a Amazon para que te devuelvan el dinero del envío. Generalmente lo hacen en forma de Gift Card. Igual que en el caso anterior te darán el reembolso cuando llegue a origen.</li>
+        </ol>
+            <li>Si solicitaste el reembolso porque no te gustó el producto, o ya no lo necesitas, Amazon te pedirá que lo devuelvas para que te den el reembolso. En este caso tu debes pagar la devolución.</li>
+        <ol>
+            <li>Para devolver el producto Amazon te dará una dirección de devolución, para que vayas a una empresa logística a enviar el paquete (tu eliges cual). Una vez llega a origen te harán el reembolso de lo pagado. (No te reembolsarán el coste del envío).</li>
+        </ol>
+        </ul>
+    </section> 
+        <br> <br>
+
+<script src="script-navbar.js"></script>
+
+<!--Para el boton para volver arriba-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script type='text/javascript'>
+    $(document).ready(function(){ 
+        $(window).scroll(function(){ 
+            if ($(this).scrollTop() > 100) { 
+                $('#scroll').fadeIn(); 
+            } else { 
+                $('#scroll').fadeOut(); 
+            } 
+        }); 
+        $('#scroll').click(function(){ 
+            $("html, body").animate({ scrollTop: 0 }, 600); 
+            return false; 
+        }); 
+    });
+    </script>
+</body>
+</html>

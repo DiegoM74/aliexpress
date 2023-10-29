@@ -26,9 +26,9 @@
             </div>
             </div>
 
-        <!--Menu guias-->
+        <!--Menu guias AliExpress-->
             <div class="dropdown">
-                <button class="dropbtn">Guías 
+                <button class="dropbtn">Guías AliExpress
                 <i class="fa fa-caret-down"></i>
                 </button>
             <div class="dropdown-content">
@@ -39,12 +39,24 @@
             </div>
             </div>
 
+        <!--Menu guias Amazon-->
+        <div class="dropdown">
+            <button class="dropbtn">Guías Amazon
+            <i class="fa fa-caret-down"></i>
+            </button>
+        <div class="dropdown-content">
+            <a href="guia-1-AM.html">Consejos para comprar</a>
+            <a href="guia-2-AM.html">Reembolsos</a>
+            <a href="guia-3-AM.html">Envíos desde USA</a>
+            <a href="guia-4-AM.html">Recuperación de cuentas</a>
+        </div>
+        </div>
+
         <!--Script-->
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
 
     <!--Hasta aqui-->
-
     <!--Aqui empieza la pagina-->
 <h1>Calculadora de Impuestos AliExpress</h1>
     <p>Ingresa el precio del producto y del envío y dale al botón.</p>
@@ -62,7 +74,8 @@
 
 
     <!--Valor producto-->
-    <p><label for="producto">Precio del Producto</label></p>
+    <p class="det"><label for="producto">Precio del Producto</label></p>
+        <p class="p-det">No separes decimales, ni con puntos ni comas.</p>
         <input type="number" id="producto" step="0.01" placeholder="Ingrese el precio">
     <p id="productoError" class="error"></p>
 
@@ -78,20 +91,21 @@
 
 
     <!--Valor envio-->
-    <p><label for="envio">Precio del Envío</label></p>
+    <p class="det"><label for="envio">Precio del Envío</label></p>
+        <p class="p-det">No separes decimales, ni con puntos ni comas.</p>
         <input type="number" id="envio" step="0.01" placeholder="Ingrese el precio">
     <p id="envioError" class="error"></p>
 
 
     <!--Selector empresa-->
-    <p class="det"><label for ="empresa">Empresa</label></p>
-        <p class="p-det">Si no sabes cual es, elige Correos.</p>
+    <p><label for ="empresa">Empresa</label></p>
         <select id="empresa">
             <option value="">Selecciona una opción</option>
             <option value="correos">Correos Chile</option>
             <option value="dhl">DHL</option>
             <option value="ups">UPS</option>
             <option value="fedex">FedEx</optio>
+            <option value="otra">Otra</option>
         </select>
     <p id="empresaError" class="error"></p>
 
@@ -198,7 +212,7 @@
         <p class="det"><label for="bodega">Almacenaje</label></p>
             <p class="p-det">Cargo diario por almacenar el pedido.</p>
         <input type="text" id="bodega" class="salida" readonly>
-    </div>
+    </div> <br>
 
 <script src="script-calculadora.js"></script>
 

@@ -224,6 +224,12 @@
                     honorarios = 2000 + (0.015 * cif);
 }
 
+                else if (empresa === 'otra') {
+                    totalHonorariosError.textContent = 'No es posible calcular los honorarios';
+                    honorariosError.textContent = 'No es posible calcular los honorarios';
+                    honorarios = 0;
+}
+
                 else if (empresa === 'dhl') {
                     if (producto <= 30 * dolar) {
                         honorarios = 0;
@@ -300,6 +306,9 @@
             if (empresa === 'correos') {
                 bodega = 0; //falta el valor
 
+            } else if (empresa === 'otra') {
+                bodega = 0;
+            
             } else if (empresa === 'dhl') {
                 bodega = 10 * dolar;
 

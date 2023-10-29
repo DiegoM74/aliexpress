@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envíos desde USA</title>
+    <link rel="stylesheet" href="styles-guias.css">
+</head>
+<body>
+    <!--Aqui va la barra de navegacion-->
+    <!--https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp-->
+
+    <div class="topnav" id="myTopnav">
+
+        <!--Boton home-->
+            <a href="main.html" class="active">Home</a>
+
+        <!--Menu herramientas-->
+            <div class="dropdown">
+                <button class="dropbtn">Herramientas 
+                <i class="fa fa-caret-down"></i>
+                </button>
+            <div class="dropdown-content">
+                <a href="reconocedor.html">Reconocedor</a>
+                <a href="calculadora.html">Calculadora</a>
+            </div>
+            </div>
+
+        <!--Menu guias AliExpress-->
+            <div class="dropdown">
+                <button class="dropbtn">Guías AliExpress
+                <i class="fa fa-caret-down"></i>
+                </button>
+            <div class="dropdown-content">
+                <a href="guia-1.html">Consejos para comprar</a>
+                <a href="guia-2.html">Reembolsos</a>
+                <a href="guia-3.html">Envíos desde China</a>
+                <a href="guia-4.html">Aduana Chilena</a>
+            </div>
+            </div>
+
+        <!--Menu guias Amazon-->
+        <div class="dropdown">
+            <button class="dropbtn">Guías Amazon
+            <i class="fa fa-caret-down"></i>
+            </button>
+        <div class="dropdown-content">
+            <a href="guia-1-AM.html">Consejos para comprar</a>
+            <a href="guia-2-AM.html">Reembolsos</a>
+            <a href="guia-3-AM.html">Envíos desde USA</a>
+            <a href="guia-4-AM.html">Recuperación de cuentas</a>
+        </div>
+        </div>
+
+        <!--Script-->
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <!--Hasta aqui-->
+
+    <!--Boton para volver arriba-->
+    <!--https://programacion.net/articulo/como_implementar_el_boton_de_%E2%80%9Cvolver_a_arriba%E2%80%9D_mediante_css_y_jquery_1822-->
+        <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
+
+    <!--Aqui empieza la pagina-->
+<h1>Envíos desde USA</h1>
+    <p class="p">En esta guía verán las empresas por las cuales Amazon envía sus productos, además cuánto se tardan en llegar y como hacer el seguimiento.</p>
+
+    <br>
+
+    <!--Contenido guia-->
+    <div class="contenido">
+        <h2>Contenido</h2>
+        <li><a href="#1">Empresas que reparten</a></li>
+        <li><a href="#2">Seguimiento envíos</a></li>
+    </div>
+        <br> <br>
+
+
+    <!--Inicio guias-->
+
+    <!--Publicacion 1-->
+    <section id="1">
+        <h2>Empresas que reparten</h2>
+            <p>Los productos enviados a través de Amazon USA pueden llegar por varias empresas, específicamente por 5, las cuales son estas:</p>
+        <ul>
+            <li><b>DHL</b>: se tarda de 1 a 2 semanas en llegar. Es un método muy confiable, de los mejores a mi parecer. La probabilidad de que se pierda es muy baja. Si no tienen cobertura hacia tu domicilio se lo pasaran a Bluexpress o Chilexpress.</li>
+            <li><b>Chilexpress</b>: hay "2 variantes". Una confiable, y otra no tanto.</li>
+        <ol>
+            <li>La más confiable se tarda de 1 a 2 semanas en llegar. En Amazon aparece como enviado por <b>Chilexpress</b>. Es un método bastante confiable porque UPS lo trae a Chile. Si no tienen cobertura hacia tu domicilio lo dejarán en la sucursal más cercana a ti.</li>
+            <li>Y la otra se tarda de 1 a 4 semanas en llegar. <b>Deprisa</b> trae este al país, y algunas veces "pierden" el pedido. Si llegase a perderse, Amazon te hará el reembolso automáticamente.</li>
+        </ol>
+            <li><b>WSP Express y Bluexpress</b>: se tardan de 1 a 4 semanas en llegar. LandMark Global trae estos pedidos al país. Si bien es cierto que no son tan confiables como DHL o UPS, son mejores que Deprisa.</li>
+        </ul>
+    </section> 
+        <br> <br>
+
+
+    <!--Publicacion 2-->
+    <section id="2">
+        <h2>Seguimiento envíos</h2>
+            <p>Hacer seguimiento a los envíos de Amazon es bastante fácil, esto porque desde su misma página se puede hacer, además te dan un código para seguirlo desde la página del transportista. Por esto estoy haciendo esta publicación en donde se explica como seguirlos.</p>
+            <p>Complementar con <a href="#1">Empresas que reparten</a>.</p>
+        <ul>
+            <li><b>DHL</b>: en este caso es bastante sencillo hacer el seguimiento. Puedes verlo por la página de Amazon, o en DHL con el código que te dan. Te recomiendo seguirlo por DHL porque el seguimiento está mejor explicado y es más fácil entenderlo.</li>
+            <li><b>Chilexpress</b>:</li>
+        <ol>
+            <li><b>Variante UPS</b>: en Amazon aparecerá como enviado por Chilexpress, además te darán un código de 12 dígitos. Cuando está en USA solo puedes seguirlo por Amazon. Cuando lo recibe Chilexpress empezará a actualizarse el seguimiento en su pagina.</li>
+            <li><b>Variante Deprisa</b>: en Amazon aparecerá como enviado por Deprisa. Te darán un código de seguimiento, sin embargo, no podrás seguirlo por ninguna página más, solo por Amazon.</li>
+        </ol>
+            <li><b>WSP Express y Bluexpress</b>: en Amazon aparecerá como enviado por LandMark Global. Solo puedes seguirlo por Amazon.</li>
+        </ul>
+    </section> 
+        <br> <br>
+
+<script src="script-navbar.js"></script>
+
+<!--Para el boton para volver arriba-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script type='text/javascript'>
+    $(document).ready(function(){ 
+        $(window).scroll(function(){ 
+            if ($(this).scrollTop() > 100) { 
+                $('#scroll').fadeIn(); 
+            } else { 
+                $('#scroll').fadeOut(); 
+            } 
+        }); 
+        $('#scroll').click(function(){ 
+            $("html, body").animate({ scrollTop: 0 }, 600); 
+            return false; 
+        }); 
+    });
+    </script>
+</body>
+</html>

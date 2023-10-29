@@ -26,9 +26,9 @@
             </div>
             </div>
 
-        <!--Menu guias-->
+        <!--Menu guias AliExpress-->
             <div class="dropdown">
-                <button class="dropbtn">Guías 
+                <button class="dropbtn">Guías AliExpress
                 <i class="fa fa-caret-down"></i>
                 </button>
             <div class="dropdown-content">
@@ -39,11 +39,28 @@
             </div>
             </div>
 
+        <!--Menu guias Amazon-->
+        <div class="dropdown">
+            <button class="dropbtn">Guías Amazon
+            <i class="fa fa-caret-down"></i>
+            </button>
+        <div class="dropdown-content">
+            <a href="guia-1-AM.html">Consejos para comprar</a>
+            <a href="guia-2-AM.html">Reembolsos</a>
+            <a href="guia-3-AM.html">Envíos desde USA</a>
+            <a href="guia-4-AM.html">Recuperación de cuentas</a>
+        </div>
+        </div>
+
         <!--Script-->
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
 
     <!--Hasta aqui-->
+
+    <!--Boton para volver arriba-->
+    <!--https://programacion.net/articulo/como_implementar_el_boton_de_%E2%80%9Cvolver_a_arriba%E2%80%9D_mediante_css_y_jquery_1822-->
+        <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
 
     <!--Aqui empieza la pagina-->
 <h1>Ayudas AliExpress Chile</h1>
@@ -95,13 +112,12 @@
         <p>Si quieres ayudar con el desarrollo de la pagina, considera donar. Esto me animará a seguir trabajando en la página y agregar más cosas.</p>
     </div> <br>
 
-<!--Aun no esta listo-->
-<!--
+<!--Amazon-->
 <h2>Guías Amazon USA</h2>
     <p class="p">A pesar de que esta página es sobre AliExpress, si te interesa comprar en Amazon USA y no sabes como hacerlo, estas guías te ayudarán.</p>
 
     <div class="box">
-        <a href="guia-1-AM.html">Consejos para la compra</a>
+        <a href="guia-1-AM.html">Consejos para comprar</a>
         <p>En esta guía verán consejos para comprar y evitar pasar malos ratos, como hacerlo y que hacer después de comprar.</p>
     </div> <br>
 
@@ -119,9 +135,26 @@
         <a href="guia-4-AM.html">Recuperación de cuenta</a>
         <p>En esta guía verán como recuperar su cuenta si fue bloqueada por Amazon, o no pueden acceder por diversos motivos.</p>
     </div> <br>
-    -->
 
 <script src="script-navbar.js"></script>
 
+<!--Para el boton para volver arriba-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script type='text/javascript'>
+    $(document).ready(function(){ 
+        $(window).scroll(function(){ 
+            if ($(this).scrollTop() > 100) { 
+                $('#scroll').fadeIn(); 
+            } else { 
+                $('#scroll').fadeOut(); 
+            } 
+        }); 
+        $('#scroll').click(function(){ 
+            $("html, body").animate({ scrollTop: 0 }, 600); 
+            return false; 
+        }); 
+    });
+    </script>
 </body>
 </html>

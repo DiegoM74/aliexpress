@@ -26,9 +26,9 @@
             </div>
             </div>
 
-        <!--Menu guias-->
+        <!--Menu guias AliExpress-->
             <div class="dropdown">
-                <button class="dropbtn">Guías 
+                <button class="dropbtn">Guías AliExpress
                 <i class="fa fa-caret-down"></i>
                 </button>
             <div class="dropdown-content">
@@ -39,11 +39,28 @@
             </div>
             </div>
 
+        <!--Menu guias Amazon-->
+        <div class="dropdown">
+            <button class="dropbtn">Guías Amazon
+            <i class="fa fa-caret-down"></i>
+            </button>
+        <div class="dropdown-content">
+            <a href="guia-1-AM.html">Consejos para comprar</a>
+            <a href="guia-2-AM.html">Reembolsos</a>
+            <a href="guia-3-AM.html">Envíos desde USA</a>
+            <a href="guia-4-AM.html">Recuperación de cuentas</a>
+        </div>
+        </div>
+
         <!--Script-->
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
 
     <!--Hasta aqui-->
+
+    <!--Boton para volver arriba-->
+    <!--https://programacion.net/articulo/como_implementar_el_boton_de_%E2%80%9Cvolver_a_arriba%E2%80%9D_mediante_css_y_jquery_1822-->
+        <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
 
     <!--Aqui empieza la pagina-->
 <h1>Consejos para comprar</h1>
@@ -73,12 +90,12 @@
         <ul>
             <li>Revisa las reseñas del producto y la reputación del vendedor. Si tiene buenas reseñas, y el vendedor tiene una buena reputación, es poco probable que seas estafado.</li>
             <li>Prácticamente todo lo de AliExpress viene desde China, y la logística desde ahí funciona muy bien y los envíos son baratos. Que sea enviado desde otro país no es muy común, y puede que sea una estafa. Como está escrito en el punto anterior, lo mejor es revisar las reseñas del producto y la reputación del vendedor antes de comprar.</li>
-            <li>Al comprar, lo mejor es elegir los envíos "AliExpress Standard Shipping" y "AliExpress Saver Shipping". Estos 2 envíos son los mejores por su precio, y al usarlos, el pedido tardará menos de 1 mes en llegar (en promedio).</li>
-            <li>Complementando el punto anterior, lo mejor es usar el primero para las cosas más caras, y el segundo para las más baratas. Evita el envío "Cainiao Super Economy Global" y similares.</li>
-            <li>Si bien es cierto que no es totalmente necesario, mira que el producto tenga el "Servicio de Devolución Gratuita de AliExpress". Al tener este servicio, si el pedido llega en mal estado, o ya no lo necesitas, podrás devolverlo gratuitamente y te darán el reembolso completo. </l>
-            <li>Recuerda que cualquier compra que supere los 30 dólares (envío incluido), debe pagar impuestos. Debido a que los controles aduanales son al azar, y a menudo toman las órdenes más llamativas, es probable que el pedido pase sin pagar nada. Sin embargo, existe el riesgo, y no hay formas de evitarlo (declarar por menos no sirve para nada).</li>
+            <li>Al comprar, lo mejor es elegir los envíos <b>"AliExpress Standard Shipping"</b> y <b>"AliExpress Saver Shipping"</b>. Estos 2 envíos son los mejores por su precio, y al usarlos, el pedido tardará menos de 1 mes en llegar (en promedio).</li>
+            <li>Complementando el punto anterior, lo mejor es usar el primero para las cosas más caras, y el segundo para las más baratas. Evita el envío <b>"Cainiao Super Economy Global"</b> y similares.</li>
+            <li>Si bien es cierto que no es totalmente necesario, mira que el producto tenga el <b>"Servicio de Devolución Gratuita de AliExpress"</b>. Al tener este servicio, si el pedido llega en mal estado, o ya no lo necesitas, podrás devolverlo gratuitamente y te darán el reembolso completo. </l>
+            <li>Recuerda que cualquier compra que supere los <b>41 dólares</b> (envío incluido), debe pagar impuestos. Debido a que los controles aduanales son al azar, y a menudo toman las órdenes más llamativas, es probable que el pedido pase sin pagar nada. Sin embargo, existe el riesgo, y no hay formas de evitarlo (declarar por menos no sirve para nada).</li>
         </ul>
-            <p>Complementar con guía <a href="guia-4.html">Todo sobre la aduana</a>.</p>
+            <p>Complementar con guía <a href="guia-4.html">Aduana Chilena</a>.</p>
     </section> 
         <br> <br>
 
@@ -136,7 +153,7 @@
             <p>Si es primera vez que compras en AliExpress encontrarás varias ofertas que parecen bastante tentadoras, sin embargo debes tener en cuenta algunas cosas.</p>
         <ul>
             <li>Empezaré con los productos a 0,01 USD, o 9 pesos. Solo puedes comprar uno a ese precio. Aunque a veces el sistema presenta problemas técnicos y te dejará comprar varios.</li>
-            <li>Generalmente el envío de estas ofertas es gratis, sin embargo, es a través de un método bastante lento. El cual es "Cainiao Super Economy Global". Este envío es muy malo y tiene un alto riesgo de pérdida. Te recomiendo cambiarlo y poner el "AliExpress Saver Shipping".</li>
+            <li>Generalmente el envío de estas ofertas es gratis, sin embargo, es a través de un método bastante lento. El cual es <b>"Cainiao Super Economy Global"</b>. Este envío es muy malo y tiene un alto riesgo de pérdida. Te recomiendo cambiarlo y poner el <b>"AliExpress Saver Shipping"</b>.</li>
             <li>También puede que te den un cupón bastante bueno. Lo podrás usar en el/los producto/s que quieras. Solo ten en cuenta que no descuenta el valor del envío, solo del producto, por lo tanto, el mínimo de compra solo toma en cuenta el valor del producto.</li>
         </ul>
     </section>
@@ -144,5 +161,23 @@
 
 <script src="script-navbar.js"></script>
 
+<!--Para el boton para volver arriba-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script type='text/javascript'>
+    $(document).ready(function(){ 
+        $(window).scroll(function(){ 
+            if ($(this).scrollTop() > 100) { 
+                $('#scroll').fadeIn(); 
+            } else { 
+                $('#scroll').fadeOut(); 
+            } 
+        }); 
+        $('#scroll').click(function(){ 
+            $("html, body").animate({ scrollTop: 0 }, 600); 
+            return false; 
+        }); 
+    });
+    </script>
 </body>
 </html>

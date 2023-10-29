@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperación de cuentas</title>
+    <link rel="stylesheet" href="styles-guias.css">
+</head>
+<body>
+    <!--Aqui va la barra de navegacion-->
+    <!--https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp-->
+
+    <div class="topnav" id="myTopnav">
+
+        <!--Boton home-->
+            <a href="main.html" class="active">Home</a>
+
+        <!--Menu herramientas-->
+            <div class="dropdown">
+                <button class="dropbtn">Herramientas 
+                <i class="fa fa-caret-down"></i>
+                </button>
+            <div class="dropdown-content">
+                <a href="reconocedor.html">Reconocedor</a>
+                <a href="calculadora.html">Calculadora</a>
+            </div>
+            </div>
+
+        <!--Menu guias AliExpress-->
+            <div class="dropdown">
+                <button class="dropbtn">Guías AliExpress
+                <i class="fa fa-caret-down"></i>
+                </button>
+            <div class="dropdown-content">
+                <a href="guia-1.html">Consejos para comprar</a>
+                <a href="guia-2.html">Reembolsos</a>
+                <a href="guia-3.html">Envíos desde China</a>
+                <a href="guia-4.html">Aduana Chilena</a>
+            </div>
+            </div>
+
+        <!--Menu guias Amazon-->
+        <div class="dropdown">
+            <button class="dropbtn">Guías Amazon
+            <i class="fa fa-caret-down"></i>
+            </button>
+        <div class="dropdown-content">
+            <a href="guia-1-AM.html">Consejos para comprar</a>
+            <a href="guia-2-AM.html">Reembolsos</a>
+            <a href="guia-3-AM.html">Envíos desde USA</a>
+            <a href="guia-4-AM.html">Recuperación de cuentas</a>
+        </div>
+        </div>
+
+        <!--Script-->
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <!--Hasta aqui-->
+
+    <!--Boton para volver arriba-->
+    <!--https://programacion.net/articulo/como_implementar_el_boton_de_%E2%80%9Cvolver_a_arriba%E2%80%9D_mediante_css_y_jquery_1822-->
+        <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
+
+    <!--Aqui empieza la pagina-->
+<h1>Recuperación de cuentas</h1>
+    <p class="p">En esta guía verán como recuperar su cuenta si fue bloqueada por Amazon, o no pueden acceder por diversos motivos.</p>
+
+    <br>
+
+    <!--Contenido guia-->
+    <div class="contenido">
+        <h2>Contenido</h2>
+        <li><a href="#1">Recuperación de cuenta por falla en verificación en dos pasos</a></li>
+        <li><a href="#2">Recuperación de cuenta por bloqueo</a></li>
+    </div>
+        <br> <br>
+
+
+    <!--Inicio guias-->
+
+    <!--Publicacion 1-->
+    <section id="1">
+        <h2>Recuperación de cuenta por falla en verificación en dos pasos</h2>
+            <p>Es muy bueno activar la verificación en dos pasos porque mejora la seguridad de la cuenta.</p>
+            <p>Pero a veces puede ser un dolor de cabeza porque ya no tienes la aplicación "Autentificador", o el código que envían al celular no llega. Para solucionar este problema deberás de hacer esto.</p>
+        <ul>
+            <li>Para comenzar, dirígete a esta página: <a href="https://www.amazon.es/a/recover/upload">Amazon</a>.</li>
+            <li>Ahí te pedirá iniciar sesión en tu cuenta. Lo haces y te mandará a otra página.</li>
+            <li>En esa deberás de subir una foto de tu licencia de conducir o de tu carnet.</li>
+            <li>Después de que lo hagas deberás esperar de 1 a 2 días para que revisen la solicitud. Te enviarán un correo informando de la decisión tomada.</li>
+        <ol>
+            <li>Si fue aceptada, desactivarán la verificación en dos pasos y podrás entrar a la cuenta normalmente (solo ingresando tu correo o numero y contraseña).</li>
+            <li>Si fue rechazada, deberás enviar nuevamente las fotos. Asegúrate de que se vea la información de forma clara. También puedes probar con otro documento.</li>
+        </ol>
+            <li>Para terminar, si vas a activar de nuevo la verificación en dos pasos, asegúrate de tener la aplicación "Autentificador" instalada en más de un dispositivo. Si también activas la verificación por número de celular, te recomiendo que no uses un número de WOM o de una OMV. Esas empresas tienen problemas para recibir este tipo de códigos.</li>
+        </ul>
+    </section> 
+        <br> <br>
+
+
+    <!--Publicacion 2-->
+    <section id="2">
+        <h2>Recuperación de cuenta por bloqueo</h2>
+            <p>Tu cuenta puede ser bloqueada por Amazon por varios motivos. Generalmente lo hacen porque detectan actividad sospechosa.</p>
+            <p>Si no sabes que hacer mira esta publicación.</p>
+        <ul>
+            <li>Si te llegó un correo avisando de esto, revisa que el remitente tenga el @amazon.com. Si es diferente (ej: @gmail.com), es una estafa o phishing.</li>
+            <li>Si es real, te tendrás que contactar con el soporte de Amazon para que ellos envíen la solicitud al departamento adecuado.</li>
+            <li>Después de unos días te llegará un correo de Amazon informándote del estado de la solicitud.</li>
+        <ol>
+            <li>Si la aceptan podrás volver a usar tu cuenta con normalidad.</li>
+            <li>Si la rechazan ya no se podrá hacer nada para recuperarla. Puedes crear otra, pero no puede ser con la misma tarjeta o dirección.</li>
+        </ol>
+        </ul>
+    </section> 
+        <br> <br>
+
+<script src="script-navbar.js"></script>
+
+<!--Para el boton para volver arriba-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script type='text/javascript'>
+    $(document).ready(function(){ 
+        $(window).scroll(function(){ 
+            if ($(this).scrollTop() > 100) { 
+                $('#scroll').fadeIn(); 
+            } else { 
+                $('#scroll').fadeOut(); 
+            } 
+        }); 
+        $('#scroll').click(function(){ 
+            $("html, body").animate({ scrollTop: 0 }, 600); 
+            return false; 
+        }); 
+    });
+    </script>
+</body>
+</html>
