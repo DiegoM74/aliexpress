@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Impuestos</title>
     <link rel="stylesheet" href="styles-calculadora.css">
+    <link rel="stylesheet" href="styles-com.css">
 </head>
 <body>
     <!--Aqui va la barra de navegacion-->
-    <!--https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp-->
 
     <div class="topnav" id="myTopnav">
 
@@ -57,6 +57,10 @@
     </div>
 
     <!--Hasta aqui-->
+
+    <!--Boton para volver arriba-->
+        <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
+
     <!--Aqui empieza la pagina-->
 <h1>Calculadora de Impuestos AliExpress</h1>
     <p>Ingresa el precio del producto y del envío y dale al botón.</p>
@@ -214,9 +218,17 @@
         <input type="text" id="bodega" class="salida" readonly>
     </div> <br>
 
-<script src="script-calculadora.js"></script>
+    <!--Script para hacer los calculos-->
+        <script src="script-calculadora.js"></script>
 
-<script src="script-navbar.js"></script>
+    <!--Script navbar-->
+        <script src="script-navbar.js"></script>
 
+    <!--Para el boton para volver arriba-->
+        <!--jQuery-->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+        <!--Script-->
+            <script src="script-boton.js"></script>
 </body>
 </html>

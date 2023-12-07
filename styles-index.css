@@ -1,0 +1,33 @@
+/*parrafo justificado*/
+p {
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+/*parrafo normal*/
+.p {
+    text-align: center;
+}
+
+/*links botones*/
+.box a {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    margin: 5px;
+}
+
+.box a:hover {
+    background-color: #f10000;
+}
+
+/*contenedor*/
+.box {
+    border: 1px solid #000;
+    padding: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+}

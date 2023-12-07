@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consejos para comprar</title>
     <link rel="stylesheet" href="styles-guias.css">
+    <link rel="stylesheet" href="styles-com.css">
 </head>
 <body>
     <!--Aqui va la barra de navegacion-->
-    <!--https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp-->
 
     <div class="topnav" id="myTopnav">
 
@@ -59,7 +59,6 @@
     <!--Hasta aqui-->
 
     <!--Boton para volver arriba-->
-    <!--https://programacion.net/articulo/como_implementar_el_boton_de_%E2%80%9Cvolver_a_arriba%E2%80%9D_mediante_css_y_jquery_1822-->
         <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
 
     <!--Aqui empieza la pagina-->
@@ -135,31 +134,20 @@
             <li>En el primer caso el banco debe procesar el reembolso, por lo tanto puede que se tarde en llegar. El plazo que da Amazon es de 30 días hábiles.</li>
             <li>Si seleccionas la Gift Card te enviarán el reembolso automáticamente y podrás usarlo cuando quieras ya que no vence.</li>
         </ol>
-            <p>Punto mejor explicado en la guia <a href="guia-3-AM.html#1">Reembolsos</a>.</p>
+            <p>Punto mejor explicado en la guia <a href="guia-2-AM.html#1">Reembolsos</a>.</p>
             <li>Después de que lo liberan de aduanas se entregará a la empresa repartidora, la cual generalmente lo entrega al día siguiente o al sub-siguiente. Por lo tanto tendrás que estar atento/a al seguimiento para que cuando salga a reparto haya una persona en tu domicilio. (Algunas empresas reparten hasta las 20 horas).</li>
         </ul>
     </section>
         <br> <br>
 
-<script src="script-navbar.js"></script>
+    <!--Script navbar-->
+        <script src="script-navbar.js"></script>
 
-<!--Para el boton para volver arriba-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!--Para el boton para volver arriba-->
+        <!--jQuery-->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-<script type='text/javascript'>
-    $(document).ready(function(){ 
-        $(window).scroll(function(){ 
-            if ($(this).scrollTop() > 100) { 
-                $('#scroll').fadeIn(); 
-            } else { 
-                $('#scroll').fadeOut(); 
-            } 
-        }); 
-        $('#scroll').click(function(){ 
-            $("html, body").animate({ scrollTop: 0 }, 600); 
-            return false; 
-        }); 
-    });
-    </script>
+        <!--Script-->
+            <script src="script-boton.js"></script>
 </body>
 </html>

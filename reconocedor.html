@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reconocedor de códigos de AliExpress</title>
     <link rel="stylesheet" href="styles-reconocedor.css">
+    <link rel="stylesheet" href="styles-com.css">
 </head>
 <body>
     <!--Aqui va la barra de navegacion-->
-    <!--https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp-->
 
     <div class="topnav" id="myTopnav">
 
@@ -58,6 +58,9 @@
 
     <!--Hasta aqui-->
 
+    <!--Boton para volver arriba-->
+        <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
+
     <!--Aqui empieza la pagina-->
 <h1>Reconocedor de códigos de AliExpress</h1>
     <p>Pega tu código de seguimiento, después dale al botón y podrás ver información sobre tu envío.</p>
@@ -99,9 +102,19 @@
     <p>- Los de Starken, DHL Express, FedEx y algunos de UPS, por no tener un formato definido.</p>
     <p>- El envío Seller's Shipping Method no tiene 100% de compatibilidad, porque el vendedor decide por donde enviar, y puede elegir cualquier empresa.</p>
 
-<script src="script-reconocedor.js"></script>
+    <br> <br>
 
-<script src="script-navbar.js"></script>
+    <!--Script para reconocer los codigos-->
+        <script src="script-reconocedor.js"></script>
 
+    <!--Script navbar-->
+        <script src="script-navbar.js"></script>
+
+    <!--Para el boton para volver arriba-->
+        <!--jQuery-->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <!--Script-->
+            <script src="script-boton.js"></script>
 </body>
 </html>
