@@ -179,7 +179,7 @@
     // Funciones para el cálculo
         //dolar
             function ValorDolar() {
-                const valorDolar = 904.62; //valor octubre 2023
+                const valorDolar = 869.47; //valor diciembre 2023
                 return valorDolar;
 }
         //total compra
