@@ -165,7 +165,7 @@
     } else if (code.length === 17 && code.startsWith("FAREX") && code.endsWith("YQ")) {
     result.innerHTML = "<p>Transportista en China: <a href='https://www.17track.net/en/carriers/far-international'>Far Internacional</a></p> <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a><p/> <p>Seguimiento por AliExpress: No<p/> <p>Seguimiento en Chile: No<p/> <p>Tiempo estimado de entrega: 2 a 5 semanas<p/>"
 
-//dhl e
+// e
     } else if (code.length === 22 && code.startsWith("HKYES")) {
     result.innerHTML = "<p>Transportista en China: <a href='https://ecommerceportal.dhl.com/track'>DHL eCommerce</a></p> <p>Transportista en Chile: Desconocido<p/> <p>Seguimiento por AliExpress: No<p/> <p>Seguimiento en Chile: No<p/> <p>Tiempo estimado de entrega: Desconocido<p/>"
 

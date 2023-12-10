@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reconocedor de códigos de AliExpress</title>
-    <link rel="stylesheet" href="styles-reconocedor.css">
+    <title>Buscador de envíos</title>
+    <link rel="stylesheet" href="styles-buscador.css">
     <link rel="stylesheet" href="styles-com.css">
-    <meta name="description" content="Herramienta para saber información sobre el método de envío usado a partir del código de seguimiento.">
+    <meta name="description" content="Herramienta para saber como es un envío de AliExpress a partir del nombre.">
 </head>
 <body>
+
     <!--Aqui va la barra de navegacion-->
 
     <div class="topnav" id="myTopnav">
@@ -63,50 +64,33 @@
         <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
 
     <!--Aqui empieza la pagina-->
-<h1>Reconocedor de códigos de AliExpress</h1>
-    <p>Pega tu código de seguimiento, después dale al botón y podrás ver información sobre tu envío.</p>
-    <p>Puedes darle clic a los nombres de las empresas para ir a su página y hacer seguimiento desde ahí.</p>
+<h1>Buscador de envíos</h1>
 
-    <!--Input codigo-->
-    <input type="text" id="code" placeholder="Ingresa el código"> <br> <br>
+    <p>Ingresa el nombre del envío que aparece en AliExpress y la página te dará información sobre este.</p>
+    <p class="p">Cuando escribas 3 letras aparecerán los posibles nombres de los envíos. Selecciona el que quieras para después darle al botón</p>
+
+    <!--Input texto-->
+        <input type="text" id="name" placeholder="Ingresa el nombre del envío"> <br>
+
+    <!--Coincidencias-->
+    <div class="suggestions">
+        <p id="suggestions" class="suggestions"></p>
+    </div>
 
     <!--Boton-->
-    <button type="submit" onclick="checkCode()">Obtener información</button> <br> <br>
+        <button type="submit" onclick="buscar()">Obtener información</button> <br> <br>
 
     <!--Resultado-->
     <div id="result-container" class="result-container">
         <p id="result" class="result"></p>
-    </div> 
+    </div>
 
 <h2>Importante</h2>
-    <p>Esta herramienta sirve para saber que empresa reparte el pedido, cuanto tarda en llegar y alguna información extra.</p>
-    <p>Si quieres hacer seguimiento a tu pedido, usa las páginas recomendadas o el widget de Postal Ninja implementado en esta página.</p>
-    <p>Recomiendo poner el código en una de las páginas recomendadas y buscar un código alternativo. Si sale uno, usar ese en esta página.</p>
+    <p>Cuando escribas 3 letras, apareceran los envíos que coinciden. Debes darle clic al envío que quieras antes de darle al botón. Si no lo haces puede que no salga información.</p>
+    <p>Si tu pedido ya fue enviado, te recomiendo usar el <a href="/reconocedor.html">Reconocedor de códigos</a>. Esa herramienta te dará información más precisa sobre tu envío.</p>
 
-<h2>Páginas recomendadas</h2>
-    <p>Para hacer seguimiento al pedido te recomiendo usar el widget de Postal Ninja que está abajo.</p>
-        <p><a href="https://global.cainiao.com">Global Cainiao</a></p>
-
-    <!--Widget Postal Ninja-->
-        <iframe
-	        title="Widget de seguimiento de envíos"
-	        src="https://postal.ninja/widget/tracker?lc=es&inpText=Ingresa+el+codigo&font=1em+Arial&btnFont=1em+Arial&noSave=true"
-	        style="width: 80%; height: 300px;"
-	        frameborder="0">
-        </iframe>
-
-<h2>Envíos compatibles</h2>
-    <p>- Los más conocidos y usados, como el AliExpress Standard Shipping o AliExpress Saver Shipping.</p> 
-    <p>- Los de correos postales (que empiezan y terminan con 2 letras).</p>
-
-<h2>Envíos no compatibles</h2>
-    <p>- Los de Starken, DHL Express, FedEx y algunos de UPS, por no tener un formato definido.</p>
-    <p>- El envío Seller's Shipping Method no tiene 100% de compatibilidad, porque el vendedor decide por donde enviar, y puede elegir cualquier empresa.</p>
-
-    <br> <br>
-
-    <!--Script para reconocer los codigos-->
-        <script src="script-reconocedor.js"></script>
+    <!--Script buscador-->
+        <script src="script-buscador.js"></script>
 
     <!--Script navbar-->
         <script src="script-navbar.js"></script>
@@ -114,8 +98,9 @@
     <!--Para el boton para volver arriba-->
         <!--jQuery-->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
+    
         <!--Script-->
             <script src="script-boton.js"></script>
+    
 </body>
 </html>

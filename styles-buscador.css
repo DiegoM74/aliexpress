@@ -1,0 +1,73 @@
+/*parrafo*/
+p {
+    font-size: 1.2em;
+}
+
+/*texto pequeño*/
+.p {
+    font-size: 0.9em;
+}
+
+/*links*/
+a {
+    color: #0000ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*entrada*/
+input {
+    width: 300px;
+    height: 30px;
+    font-size: 1em;
+}
+  
+/*boton*/
+button {
+    font-size: 1em;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #f10000;
+}
+
+/*texto resultado*/
+.result {
+    font-size: 1em;
+}
+
+/*div sugerencias*/
+#suggestions div {
+    border: 1px solid #000;
+    padding: 5px;
+    max-width: 350px;
+    margin: 0 auto;
+    margin-bottom: -1px; /*margen superior*/
+}
+
+#suggestions div:hover {
+    background-color: #eee;
+    transition: background 0.3s ease;
+}
+
+/*contenedor resultado*/
+.result-container {
+    border: 1px solid #000;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/*se oculta el contenedor*/
+#result-container {
+    display: none;
+}
