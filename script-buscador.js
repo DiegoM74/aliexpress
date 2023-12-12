@@ -1,8 +1,13 @@
 // Array con los nombres de los envíos
     const shippingOptions = [
-        "AliExpress Standard Shipping", 
+        "AliExpress Standard Shipping",
+        "AliExpress Selection Standard", 
         "AliExpress Saver Shipping",
-        "Cainiao Standard for Special Goods"
+        "AliExpress Selection Saver",
+        "Cainiao Standard for Special Goods",
+        "Cainiao Super Economy Global",
+        "AliExpress Premium Shipping",
+        "360Lion Standard Packet"
     ];
 
 // Para el contenedor del resultado
@@ -13,7 +18,7 @@
 
         let suggestions = document.getElementById("suggestions");
 
-        /*Se limpian las sugerencias*/
+        //Se limpian las sugerencias
             suggestions.innerHTML = "";
   
         let input = document.getElementById("name");
@@ -62,7 +67,27 @@
             `;
             break;
 
+            case "AliExpress Selection Standard":
+            result.innerHTML = `
+                <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://track.4px.com'>4PX Express</a></p>
+                <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a>, <a href='https://www.blue.cl'>BluExpress</a>, <a href='https://www.99minutos.com'>99minutos</a>, <a href='http://49.234.140.229:8082/en/trackIndex.htm'>Mia Express</a> y <a href='https://centrodeayuda.chilexpress.cl'>Chilexpress</a></p>  
+                <p>Seguimiento por AliExpress: Sí</p>
+                <p>Seguimiento en Chile: Sí</p>
+                <p>Tiempo estimado de entrega: 2 a 4 semanas</p>
+            `;
+            break;
+
             case "AliExpress Saver Shipping":
+            result.innerHTML = `
+                <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://track.4px.com'>4PX Express</a></p>
+                <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a> y <a href='http://49.234.140.229:8082/en/trackIndex.htm'>Mia Express</a></p>
+                <p>Seguimiento por AliExpress: Sí</p> 
+                <p>Seguimiento en Chile: Sí</p>
+                <p>Tiempo estimado de entrega: 2 a 5 semanas</p>
+            `;
+            break;
+
+            case "AliExpress Selection Saver":
             result.innerHTML = `
                 <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://track.4px.com'>4PX Express</a></p>
                 <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a> y <a href='http://49.234.140.229:8082/en/trackIndex.htm'>Mia Express</a></p>
@@ -76,6 +101,36 @@
             result.innerHTML = `
                 <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://track.4px.com'>4PX Express</a></p>
                 <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a> y <a href='https://www.blue.cl'>BluExpress</a></p>
+                <p>Seguimiento por AliExpress: Sí</p> 
+                <p>Seguimiento en Chile: Sí</p>
+                <p>Tiempo estimado de entrega: 2 a 5 semanas</p>
+            `;
+            break;
+
+            case "Cainiao Super Economy Global":
+            result.innerHTML = `
+                <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a>, <a href='https://track.4px.com'>4PX Express</a> y <a href='https://www.yw56.com.cn/en'>Yanwen Express</a></p>
+                <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a> y una empresa desconocida</p>
+                <p>Seguimiento por AliExpress: Sí</p> 
+                <p>Seguimiento en Chile: Aveces</p>
+                <p>Tiempo estimado de entrega: 2 a 7 meses</p>
+            `;
+            break;
+
+            case "AliExpress Premium Shipping":
+            result.innerHTML = `
+                <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a>, <a href='https://track.4px.com'>4PX Express</a> y <a href='https://www.fedex.com/es-cl/home.html'>FedEx</a></p>
+                <p>Transportista en Chile: <a href='https://www.fedex.com/es-cl/home.html'>FedEx</a></p>
+                <p>Seguimiento por AliExpress: Sí</p> 
+                <p>Seguimiento en Chile: Sí</p>
+                <p>Tiempo estimado de entrega: 2 a 4 semanas</p>
+            `;
+            break;
+
+            case "360Lion Standard Packet":
+            result.innerHTML = `
+                <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://customer.360lion.com/track'>360Lion</a></p>
+                <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a>, <a href='https://centrodeayuda.chilexpress.cl'>Chilexpress</a>, <a href='https://starken.cl/'>Starken</a> y <a href='https://www.fedex.com/es-cl/home.html'>FedEx</a></p>
                 <p>Seguimiento por AliExpress: Sí</p> 
                 <p>Seguimiento en Chile: Sí</p>
                 <p>Tiempo estimado de entrega: 2 a 5 semanas</p>
