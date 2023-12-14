@@ -1,69 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
 
 <url>
-<loc>https://aliexpresscl.vercel.app/</loc>
-<lastmod>2023-12-13</lastmod>
+  <loc>https://aliexpresscl.vercel.app/</loc>
+  <lastmod>2023-12-14T15:09:40+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://aliexpresscl.vercel.app/index.html</loc>
+  <lastmod>2023-12-14T15:09:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aliexpresscl.vercel.app/reconocedor.html</loc>
+  <lastmod>2023-12-14T15:09:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aliexpresscl.vercel.app/calculadora.html</loc>
+  <lastmod>2023-12-14T15:09:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aliexpresscl.vercel.app/buscador.html</loc>
+  <lastmod>2023-12-14T15:09:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aliexpresscl.vercel.app/guia-1.html</loc>
+  <lastmod>2023-12-14T15:09:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aliexpresscl.vercel.app/guia-2.html</loc>
+  <lastmod>2023-12-14T15:09:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aliexpresscl.vercel.app/guia-3.html</loc>
+  <lastmod>2023-12-14T15:09:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aliexpresscl.vercel.app/guia-4.html</loc>
+  <lastmod>2023-12-14T15:09:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aliexpresscl.vercel.app/guia-1-AM.html</loc>
+  <lastmod>2023-12-14T15:09:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aliexpresscl.vercel.app/guia-2-AM.html</loc>
+  <lastmod>2023-12-14T15:09:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aliexpresscl.vercel.app/guia-3-AM.html</loc>
+  <lastmod>2023-12-14T15:09:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://aliexpresscl.vercel.app/guia-4-AM.html</loc>
+  <lastmod>2023-12-14T15:09:40+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
-<url>
-<loc>https://aliexpresscl.vercel.app/index.html</loc>
-<lastmod>2023-12-13</lastmod>
-</url>
-
-<url>
-<loc>https://aliexpresscl.vercel.app/reconocedor.html</loc>
-<lastmod>2023-12-10</lastmod>
-</url>
-
-<url>
-<loc>https://aliexpresscl.vercel.app/calculadora.html</loc>
-<lastmod>2023-12-12</lastmod>
-</url>
-
-<url>
-<loc>https://aliexpresscl.vercel.app/buscador.html</loc>
-<lastmod>2023-12-13</lastmod>
-</url>
-
-<url>
-<loc>https://aliexpresscl.vercel.app/guia-1.html</loc>
-<lastmod>2023-12-10</lastmod>
-</url>
-
-<url>
-<loc>https://aliexpresscl.vercel.app/guia-2.html</loc>
-<lastmod>2023-12-07</lastmod>
-</url>
-
-<url>
-<loc>https://aliexpresscl.vercel.app/guia-3.html</loc>
-<lastmod>2023-12-10</lastmod>
-</url>
-
-<url>
-<loc>https://aliexpresscl.vercel.app/guia-4.html</loc>
-<lastmod>2023-12-10</lastmod>
-</url>
-
-<url>
-<loc>https://aliexpresscl.vercel.app/guia-1-AM.html</loc>
-<lastmod>2023-12-07</lastmod>
-</url>
-
-<url>
-<loc>https://aliexpresscl.vercel.app/guia-2-AM.html</loc>
-<lastmod>2023-12-07</lastmod>
-</url>
-
-<url>
-<loc>https://aliexpresscl.vercel.app/guia-3-AM.html</loc>
-<lastmod>2023-12-07</lastmod>
-</url>
-
-<url>
-<loc>https://aliexpresscl.vercel.app/guia-4-AM.html</loc>
-<lastmod>2023-12-10</lastmod>
-</url>
 
 </urlset>
