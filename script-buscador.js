@@ -1,4 +1,4 @@
-// Array con los nombres de los envíos
+// Array con los envios
     const shippingOptions = [
         "AliExpress Standard Shipping",
         "AliExpress Selection Standard", 
@@ -10,63 +10,59 @@
         "360Lion Standard Packet"
     ];
 
-// Para el contenedor del resultado
-    var resultContainer = document.getElementById("result-container");
+// Elementos del DOM
+    const resultContainer = document.getElementById("result-container");
+    const input = document.getElementById("name");
+    const suggestionsContainer = document.getElementById("suggestions");
+    const result = document.getElementById("result");
 
-// Función que muestra las sugerencias cuando se escriben al menos 3 letras
-    function showSuggestions() {
+// Funcion para limpiar sugerencias
+    function clearSuggestions() {
+        suggestionsContainer.innerHTML = "";
+    }
 
-        let suggestions = document.getElementById("suggestions");
-
-        //Se limpian las sugerencias
-            suggestions.innerHTML = "";
-  
-        let input = document.getElementById("name");
-        let text = input.value;
-        let found = false;
-  
-        if(text.length >= 3) {
-            let suggestions = document.getElementById("suggestions");
-            suggestions.innerHTML = "";
-            shippingOptions.forEach(option => {
-
-        if(option.toLowerCase().includes(text.toLowerCase())) {
-            let div = document.createElement("div");
-            div.innerHTML = option; 
-            div.onclick = () => {
-            input.value = option;
-            suggestions.innerHTML = "";
-        }
-            suggestions.appendChild(div);
-            found = true;
-        }
+// Funcion para las sugerencias
+    function buildSuggestions(text) {
+        shippingOptions.forEach(option => {
+            //se muestran sugerencias que coincidan con el texto ingresado
+            if (option.toLowerCase().includes(text.toLowerCase())) {
+                let div = document.createElement("div");
+                div.innerHTML = option;
+                //para reemplazar texto escrito
+                div.addEventListener("click", () => {
+                    input.value = option;
+                    clearSuggestions();
+                });
+                suggestionsContainer.appendChild(div);
+            }
         });
-
-        if(!found) {
+    
+        //se muestra un mensaje si no hay coincidencias
+        if (suggestionsContainer.children.length === 0) {
             let div = document.createElement("div");
             div.classList.add("suggestion");
             div.innerHTML = "Envío no encontrado o desconocido";
-            suggestions.appendChild(div);
+            suggestionsContainer.appendChild(div);
         }
+    }
+    
+// Funcion para mostrar las sugerencias
+    function showSuggestions() {
+        clearSuggestions();
+    
+        const text = input.value;
+        if (text.length >= 3) {
+            buildSuggestions(text);
         }
     }
 
-// Función que muestra la info del envío
+// Funcion para mostrar la info
     function buscar() {
-        let name = document.getElementById("name").value;
+        const name = input.value;
 
         switch(name) {
 
             case "AliExpress Standard Shipping":
-            result.innerHTML = `
-                <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://track.4px.com'>4PX Express</a></p>
-                <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a>, <a href='https://www.blue.cl'>BluExpress</a>, <a href='https://www.99minutos.com'>99minutos</a>, <a href='http://49.234.140.229:8082/en/trackIndex.htm'>Mia Express</a> y <a href='https://centrodeayuda.chilexpress.cl'>Chilexpress</a></p>  
-                <p>Seguimiento por AliExpress: Sí</p>
-                <p>Seguimiento en Chile: Sí</p>
-                <p>Tiempo estimado de entrega: 2 a 4 semanas</p>
-            `;
-            break;
-
             case "AliExpress Selection Standard":
             result.innerHTML = `
                 <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://track.4px.com'>4PX Express</a></p>
@@ -78,15 +74,6 @@
             break;
 
             case "AliExpress Saver Shipping":
-            result.innerHTML = `
-                <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://track.4px.com'>4PX Express</a></p>
-                <p>Transportista en Chile: <a href='https://www.correos.cl'>Correos Chile</a> y <a href='http://49.234.140.229:8082/en/trackIndex.htm'>Mia Express</a></p>
-                <p>Seguimiento por AliExpress: Sí</p> 
-                <p>Seguimiento en Chile: Sí</p>
-                <p>Tiempo estimado de entrega: 2 a 5 semanas</p>
-            `;
-            break;
-
             case "AliExpress Selection Saver":
             result.innerHTML = `
                 <p>Transportista en China: <a href='https://global.cainiao.com'>Cainiao</a> y <a href='https://track.4px.com'>4PX Express</a></p>
@@ -145,5 +132,5 @@
     resultContainer.style.display = "block";
 }
 
-// Eventos 
+// Evento para mostar sugerencias al ingresar texto
     document.getElementById("name").addEventListener("keyup", showSuggestions);
