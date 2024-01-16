@@ -1,4 +1,6 @@
-# Ayudas AliExpress Chile
+# Aviso: Poyecto Abandonado
+
+## Ayudas AliExpress Chile
 Este proyecto tiene como objetivo proporcionar recursos y herramientas para facilitar tus compras en AliExpress desde Chile. Incluye una amplia variedad de guías informativas y herramientas útiles para mejorar tu experiencia de compra.
 
 ## Contenido
